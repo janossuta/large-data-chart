@@ -1,0 +1,28 @@
+<dx-chart [dataSource]="chartData" [series]="chartSeries" class="fixed-height">
+  <dxo-argument-axis>
+    <dxo-label overlappingBehavior="rotate" [rotationAngle]="-90"></dxo-label>
+  </dxo-argument-axis>
+  <dxi-value-axis [visible]="false"></dxi-value-axis>
+
+  <dxo-common-series-settings
+    [point]="{ size: 5 }"
+    [barPadding]="0"
+  ></dxo-common-series-settings>
+  <dxo-common-axis-settings
+    [valueMarginsEnabled]="true"
+    [minValueMargin]="0.1"
+    [maxValueMargin]="0.1"
+  >
+    <dxo-tick [visible]="false"></dxo-tick>
+  </dxo-common-axis-settings>
+
+  <dxo-legend
+    [visible]="true"
+    [margin]="{top: 5, bottom: 30}"
+    horizontalAlignment="right"
+    verticalAlignment="top"
+    itemTextPosition="right"
+    [orientation]="orientation"
+  >
+  </dxo-legend>
+</dx-chart>
